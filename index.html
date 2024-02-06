@@ -43,6 +43,16 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+  <!-- <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  
 </head>
 <body>
 
@@ -169,6 +179,20 @@
 </section>
 <!-- End paper abstract -->
 
+
+<!-- network architecture-->
+<section>
+    <div class="container is-max-desktop">
+      <div class="hero-body" style="text-align: center;">
+        <img src="static/images/network_architecture.jpg" alt="network architecture figure" style="display:inline-block;">
+            <h2 class="subtitle has-text-centered">OPPLE's Network Architecture</h2>
+            <div class="content has-text-justified">
+                <p>The model includes three networks for depth perception, object extraction and imagination, and uses two frames \( \mathbf{I}^{(t-1)} \) and \( \mathbf{I}^{(t)} \) to predict the next frame \( \mathbf{I}^{(t+1)} \). <strong>(a)</strong> From \( \mathbf{I}^{(t)} \), the frame at time \( t \), object extraction network \( f \) outputs the location, pose, an identity code (from the encoder) and a probabilistic segmentation map (from the decoder) for each object. Depth perception network \( h \) infers a depth map. Object location, pose and identity code are also extracted from \( \mathbf{I}^{(t-1)} \). <strong>(b)</strong> All objects between frames are soft-matched based on the distances between their identity codes. Motion information of each object is estimated using the spatial information inferred for it at \( t-1 \) and \( t \) and the observer's motion. Motion information of self and objects are used together with object segmentation and depth maps to predict \( \mathbf{I}^{(t+1)} \) by warping \( \mathbf{I}^{(t)} \). <strong>(c)</strong> The segmented object images and depth at \( t \), together with all motion information, are used by the imagination network to imagine \( \mathbf{I}^{(t+1)} \) to fill the regions not predictable by warping. <strong>(d)</strong> The error between the final combined prediction and the ground truth of the next frame \( \mathbf{I}^{(t+1)} \) provides major teaching signals for all networks.</p>
+            </div>
+      </div>
+    </div>
+  </section>
+  <!-- End network architecture -->
 
 <!-- Image carousel -->
 <section class="hero is-small">
