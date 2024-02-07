@@ -184,8 +184,9 @@
 <section>
     <div class="container is-max-desktop">
       <div class="hero-body" style="text-align: center;">
+        <h2 class="title is-3">OPPLE's Network Architecture</h2>
         <img src="static/images/network_architecture.jpg" alt="network architecture figure" style="display:inline-block;">
-            <h2 class="subtitle has-text-centered">OPPLE's Network Architecture</h2>
+            <!-- <h2 class="subtitle has-text-centered">OPPLE's Network Architecture</h2> -->
             <div class="content has-text-justified">
                 <p>The model includes three networks for depth perception, object extraction and imagination, and uses two frames \( \mathbf{I}^{(t-1)} \) and \( \mathbf{I}^{(t)} \) to predict the next frame \( \mathbf{I}^{(t+1)} \). <strong>(a)</strong> From \( \mathbf{I}^{(t)} \), the frame at time \( t \), object extraction network \( f \) outputs the location, pose, an identity code (from the encoder) and a probabilistic segmentation map (from the decoder) for each object. Depth perception network \( h \) infers a depth map. Object location, pose and identity code are also extracted from \( \mathbf{I}^{(t-1)} \). <strong>(b)</strong> All objects between frames are soft-matched based on the distances between their identity codes. Motion information of each object is estimated using the spatial information inferred for it at \( t-1 \) and \( t \) and the observer's motion. Motion information of self and objects are used together with object segmentation and depth maps to predict \( \mathbf{I}^{(t+1)} \) by warping \( \mathbf{I}^{(t)} \). <strong>(c)</strong> The segmented object images and depth at \( t \), together with all motion information, are used by the imagination network to imagine \( \mathbf{I}^{(t+1)} \) to fill the regions not predictable by warping. <strong>(d)</strong> The error between the final combined prediction and the ground truth of the next frame \( \mathbf{I}^{(t+1)} \) provides major teaching signals for all networks.</p>
             </div>
@@ -194,44 +195,27 @@
   </section>
   <!-- End network architecture -->
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/network_architecture.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          OPPLE network architecture.
-        </h2>
+
+<!-- results section -->
+<section>
+    <div class="container is-max-desktop">
+      <div class="hero-body" style="text-align: center;">
+        <h2 class="title is-3">Results</h2>
+        <!-- result #1 -->
+        <img src="static/images/supplementary_opple_best_1.jpg" alt="results figure 1" style="display:inline-block;">
+            <h2 class="subtitle has-text-centered">Performance of our network on our test set.</h2>
+            <!-- <div class="content has-text-justified"><p>The above figure shows the performance of our network on our test set.</p></div> -->
+        <br><br>
+        <!-- result #2 -->
+        <img src="static/images/scatter_plot.jpg" alt="results figure 2" style="display:inline-block;">
+            <h2 class="subtitle has-text-centered">Ground truth vs. inferred object polar angle and distance.</h2>
+            <!-- <div class="content has-text-justified"><p>The above figure shows the the ground truth vs. inferred object polar angle and distance.</p></div> -->
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/scatter_plot.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          True vs. inferred object polar angle and distance.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/seg_output.gif" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Example of segmentation output of Opple.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
+  </section>
+  <!-- End results section -->
+
+
 
 
 
@@ -293,10 +277,8 @@
 
 
 
-
-
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Supplementary (or poster)</h2>
@@ -306,7 +288,7 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
